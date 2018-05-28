@@ -7,12 +7,14 @@ document.addEventListener("scroll", throttle(function() {
       nav.classList.remove('nav-hover-bg')
       nav.classList.add('nav-hover-underline')
       menu.classList.add('fill-black')
+      list.style.top = '60px'
   } else {
       header.classList.remove('float');
       header.classList.add('text-shadow');
       nav.classList.add('nav-hover-bg')
       nav.classList.remove('nav-hover-underline')
       menu.classList.remove('fill-black')
+      list.style.top = '80px'
   }
 },300),{passive: true});
 
@@ -24,8 +26,6 @@ mobileNav.addEventListener('click', function() {
         list.classList.remove('list-open')
     }
 })
-
-
 
 //节流函数
 function throttle(func, wait) {

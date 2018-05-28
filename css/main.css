@@ -511,11 +511,12 @@ width: 110%;
         position: fixed;
         top: -100%;
         width: 100%;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.76);
         color: #000;
         overflow: hidden;
         opacity: 0;
         transition: all 0.5s;
+            text-shadow: none;
     }
 
     .list a {
