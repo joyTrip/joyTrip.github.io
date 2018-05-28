@@ -18,12 +18,16 @@ document.addEventListener("scroll", throttle(function() {
   }
 },300),{passive: true});
 
+document.body.addEventListener('touchstart',function(){},false);
 
 mobileNav.addEventListener('click', function() {
-    if (getComputedStyle(list).opacity === '0') {
+    if (getComputedStyle(list).visibility !== 'visible') {
+        list.style.visibility = 'visible';
         list.classList.add('list-open')
     } else {
+
         list.classList.remove('list-open')
+        list.style.visibility = 'hidden';
     }
 })
 

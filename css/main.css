@@ -285,7 +285,7 @@ a.gallery-box{
     top: 0;
     left: 0;
     height: 100%;
-    background: #e6e6e6bd;
+    background: rgba(230, 230, 230, 0.75);;
     color: #040404;
     padding: 20px;
     text-align: justify;
@@ -293,9 +293,14 @@ a.gallery-box{
     transition: all 0.3s ease;
     border-radius: 5px;
     line-height: 2em;
+    user-select: none;
 }
 
 .service-mask:hover {
+    opacity: 1;
+}
+
+.service-mask:active {
     opacity: 1;
 }
 
@@ -516,7 +521,10 @@ width: 110%;
         overflow: hidden;
         opacity: 0;
         transition: all 0.5s;
-            text-shadow: none;
+        text-shadow: none;
+        visibility: hidden;
+        z-index: 999;
+        user-select: none;
     }
 
     .list a {
@@ -638,6 +646,7 @@ width: 110%;
     }
 
     .footer{
-        line-height: 15px;
+      line-height: 0.5em;
+    font-size: 0.8em;
     }
 }
